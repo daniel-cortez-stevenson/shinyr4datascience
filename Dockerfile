@@ -52,8 +52,8 @@ RUN apt-get update && apt-get install -y \
     texlive-xetex
 
 # Install R packages
-RUN R -e "install.packages(c('shiny', 'plyr', 'dplyr', 'tibble', 'tidyr', 'readr', 'RCurl', 'gtools', 'shinythemes', 'shinycssloaders', 'shinydashboard', 'shinyjs', 'd3heatmap', 'DT', 'scales', 'plotly', 'knitr', 'magick', 'formattable', 'devtools'), repos='https://cran.rstudio.com/', dependencies=TRUE)"
-RUN R -e "devtools::install_github(c('rocker/shiny', 'hadley/ggplot2', 'bokeh/rbokeh', 'ramnathv/htmlwidgets', 'dreamRs/shinyWidgets', 'haozhu233/kableExtra', 'rstudio/rmarkdown'))"
+RUN R -e "install.packages(c('plyr', 'dplyr', 'tibble', 'tidyr', 'readr', 'RCurl', 'gtools', 'shinythemes', 'shinycssloaders', 'shinydashboard', 'shinyjs', 'd3heatmap', 'DT', 'scales', 'plotly', 'knitr', 'magick', 'formattable', 'devtools'), repos='https://cran.rstudio.com/', dependencies=TRUE)"
+RUN R -e "devtools::install_github(c('rstudio/shiny', 'hadley/ggplot2', 'bokeh/rbokeh', 'ramnathv/htmlwidgets', 'dreamRs/shinyWidgets', 'haozhu233/kableExtra', 'rstudio/rmarkdown'))"
 
 # Shiny HTML redirect/404 error, etc.
 RUN mkdir -p /etc/shiny-server/templates/ && \
