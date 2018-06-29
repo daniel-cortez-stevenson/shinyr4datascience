@@ -1,4 +1,4 @@
-FROM r-base:3.4.3
+FROM r-base:3.5.0
 
 MAINTAINER danielstevenson "daniel.stevenson@charite.de"
 
